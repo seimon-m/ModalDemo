@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,14 +32,88 @@
                                     <action selector="showSecondButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRT-BB-7C2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBU-Wa-9K9">
+                                <rect key="frame" x="98" y="426" width="219" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cU-J0-GLn">
+                                <rect key="frame" x="117" y="687" width="184" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="show storyboard view"/>
+                                <connections>
+                                    <action selector="showSecondButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aS0-Ol-WGu"/>
+                                    <segue destination="Kna-ef-LoL" kind="show" id="ycT-2U-tr1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.61757262323943662" green="0.67916483274647887" blue="0.23189920774647887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="PBU-Wa-9K9" id="eI1-Vv-rbZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="129"/>
+            <point key="canvasLocation" x="140.57971014492756" y="128.57142857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ROh-AF-Ijx">
+            <objects>
+                <viewController id="Kna-ef-LoL" customClass="ViewController" customModule="ModalDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uDX-Or-KiN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDs-y0-oyl">
+                                <rect key="frame" x="106" y="565" width="202" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="back with seque unwind"/>
+                                <connections>
+                                    <action selector="showSecondButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1hU-iT-X5r"/>
+                                    <action selector="unwindBackButtonPressed:" destination="Kna-ef-LoL" eventType="touchUpInside" id="2OB-tQ-kTO"/>
+                                    <action selector="unwindBackButtonPressed:" destination="pVD-kj-T3B" eventType="touchUpInside" id="Yoc-n2-OSd"/>
+                                    <segue destination="pVD-kj-T3B" kind="unwind" unwindAction="unwind:" id="DIA-qW-Zuc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCF-j1-biC">
+                                <rect key="frame" x="96" y="632" width="223" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="back with custom IBAction"/>
+                                <connections>
+                                    <action selector="customBackButtonPressed:" destination="Kna-ef-LoL" eventType="touchUpInside" id="bmO-VS-dST"/>
+                                    <action selector="customBackButtonPressed:" destination="pVD-kj-T3B" eventType="touchUpInside" id="pM1-zR-Qdc"/>
+                                    <action selector="showSecondButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KY0-YA-hg2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StoryboardView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHf-eu-SRd">
+                                <rect key="frame" x="94" y="277" width="227" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CGc-h8-SLe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Iyd-cd-SaR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPa-Na-3zu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="pVD-kj-T3B" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="824.63768115942037" y="128.57142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

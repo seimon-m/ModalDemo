@@ -16,7 +16,7 @@ class SecondViewController: UIViewController {
     }
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        dismiss(animated: true)
+        self.dismiss(animated: true)
     }
     
     /*

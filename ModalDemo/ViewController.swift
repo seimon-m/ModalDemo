@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var appearanceCounter = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +18,27 @@ class ViewController: UIViewController {
 
     @IBAction func showSecondButton(_ sender: UIButton) {
         let secondViewController = SecondViewController()
-        secondViewController.modalTransitionStyle = .flipHorizontal
-        secondViewController.modalPresentationStyle = .formSheet
+        secondViewController.modalTransitionStyle = .coverVertical
+        secondViewController.modalPresentationStyle = .fullScreen
         self.show(secondViewController, sender: self)
     }
+    @IBOutlet var counterLabel: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        appearanceCounter += 1
+        print(appearanceCounter)
+//        counterLabel.text = "\(appearanceCounter). appearance"
+    }
+    
+    
+    @IBAction func customBackButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+    }
+    
+    
 }
 

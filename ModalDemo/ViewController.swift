@@ -22,13 +22,16 @@ class ViewController: UIViewController {
         secondViewController.modalPresentationStyle = .fullScreen
         self.show(secondViewController, sender: self)
     }
-    @IBOutlet var counterLabel: UILabel!
+    
+    @IBOutlet weak var counterLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         appearanceCounter += 1
         print(appearanceCounter)
-//        counterLabel.text = "\(appearanceCounter). appearance"
+        if (counterLabel != nil) {
+            counterLabel.text = "\(appearanceCounter).appearance"
+        }
     }
     
     
@@ -38,7 +41,6 @@ class ViewController: UIViewController {
     
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
     }
-    
     
 }
 

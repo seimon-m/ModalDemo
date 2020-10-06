@@ -30,9 +30,8 @@ class ViewController: UIViewController {
         print("MainView")
         appearanceCounter += 1
         // Wieso ist counterLabel nil wenn zurück von StoryboardView? Weil diese Funktion schon bei anzeigen der Storyboardwie aufgerufen wird, da selber ViewController. Und dort gibt es kein counterLabel. Lösung: Neuer ViewController
-        counterLabel?.text = "\(appearanceCounter).appearance"
+        counterLabel.text = "\(appearanceCounter).appearance"
     }
-    
     
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
     }

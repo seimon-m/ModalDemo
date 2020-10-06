@@ -10,15 +10,15 @@ import UIKit
 class ViewController: UIViewController {
     
     var appearanceCounter = 0
+    let secondViewController = SecondViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-    @IBAction func showSecondButton(_ sender: UIButton) {
-        let secondViewController = SecondViewController()
+    @IBAction func showSecondView(_ sender: UIButton) {
         secondViewController.modalTransitionStyle = .coverVertical
+        // Für appearanceCounter nu fullscreen möglich. Sonst wird viewWillAppear nicht aufgerufen
         secondViewController.modalPresentationStyle = .fullScreen
         self.show(secondViewController, sender: self)
     }
@@ -27,20 +27,14 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("MainView")
         appearanceCounter += 1
-        print(appearanceCounter)
-        if (counterLabel != nil) {
-            counterLabel.text = "\(appearanceCounter).appearance"
-        }
+        // Wieso ist counterLabel nil wenn zurück von StoryboardView? Weil diese Funktion schon bei anzeigen der Storyboardwie aufgerufen wird, da selber ViewController. Und dort gibt es kein counterLabel. Lösung: Neuer ViewController
+        counterLabel?.text = "\(appearanceCounter).appearance"
     }
     
-    
-    @IBAction func customBackButtonPressed(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
     
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
     }
-    
 }
 

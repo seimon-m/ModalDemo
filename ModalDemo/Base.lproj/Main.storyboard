@@ -20,7 +20,7 @@
                                 <rect key="frame" x="139" y="325" width="137" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYi-gG-rCc">
@@ -29,7 +29,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="show second view"/>
                                 <connections>
-                                    <action selector="showSecondButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRT-BB-7C2"/>
+                                    <action selector="showSecondView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VbE-62-YMc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBU-Wa-9K9">
@@ -45,13 +45,12 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="show storyboard view"/>
                                 <connections>
-                                    <action selector="showSecondButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s1Z-Y3-En1"/>
-                                    <segue destination="Kna-ef-LoL" kind="show" id="Ckn-I0-ius"/>
+                                    <segue destination="Kna-ef-LoL" kind="show" id="E6b-pX-h3y"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.61757262323943662" green="0.67916483274647887" blue="0.23189920774647887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92426327720207258" green="0.82011934261978336" blue="0.11254281409270782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="PBU-Wa-9K9" id="Hto-wh-DFE"/>
@@ -61,12 +60,12 @@
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="128.57142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Story Board View Controller-->
         <scene sceneID="ROh-AF-Ijx">
             <objects>
-                <viewController id="Kna-ef-LoL" customClass="ViewController" customModule="ModalDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Kna-ef-LoL" customClass="StoryBoardViewController" customModule="ModalDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uDX-Or-KiN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCF-j1-biC">

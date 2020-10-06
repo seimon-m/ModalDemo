@@ -30,7 +30,7 @@
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                     <state key="normal" title="back"/>
                     <connections>
-                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="zrq-2T-0pc"/>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="xls-SB-1uA"/>
                     </connections>
                 </button>
             </subviews>

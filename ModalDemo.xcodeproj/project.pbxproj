@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F412EE22252D100100458CD1 /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412EE21252D100100458CD1 /* StoryboardViewController.swift */; };
 		F4AF0DB225251A710088F31F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF0DB125251A710088F31F /* AppDelegate.swift */; };
 		F4AF0DB425251A710088F31F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF0DB325251A710088F31F /* SceneDelegate.swift */; };
 		F4AF0DB625251A710088F31F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF0DB525251A710088F31F /* ViewController.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F412EE21252D100100458CD1 /* StoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
 		F4AF0DAE25251A700088F31F /* ModalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AF0DB125251A710088F31F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4AF0DB325251A710088F31F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				F4AF0DB125251A710088F31F /* AppDelegate.swift */,
 				F4AF0DB325251A710088F31F /* SceneDelegate.swift */,
 				F4AF0DB525251A710088F31F /* ViewController.swift */,
-				F412EE21252D100100458CD1 /* StoryboardViewController.swift */,
 				F4AF0DB725251A710088F31F /* Main.storyboard */,
 				F4AF0DBA25251A730088F31F /* Assets.xcassets */,
 				F4AF0DBC25251A730088F31F /* LaunchScreen.storyboard */,
@@ -147,7 +144,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F412EE22252D100100458CD1 /* StoryboardViewController.swift in Sources */,
 				F4AF0DCE25251FB90088F31F /* SecondViewController.swift in Sources */,
 				F4AF0DB625251A710088F31F /* ViewController.swift in Sources */,
 				F4AF0DB225251A710088F31F /* AppDelegate.swift in Sources */,

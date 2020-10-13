@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="128.57142857142856"/>
         </scene>
-        <!--Story Board View Controller-->
+        <!--View Controller-->
         <scene sceneID="ROh-AF-Ijx">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Kna-ef-LoL" customClass="StoryBoardViewController" customModule="ModalDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Kna-ef-LoL" customClass="ViewController" customModule="ModalDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uDX-Or-KiN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,9 +73,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="back with custom IBAction"/>
                                 <connections>
-                                    <action selector="customBackButtonPressed:" destination="Kna-ef-LoL" eventType="touchUpInside" id="bmO-VS-dST"/>
-                                    <action selector="customBackButtonPressed:" destination="pVD-kj-T3B" eventType="touchUpInside" id="pM1-zR-Qdc"/>
-                                    <action selector="showSecondButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KY0-YA-hg2"/>
+                                    <action selector="backButton:" destination="Kna-ef-LoL" eventType="touchUpInside" id="Y1Y-Ss-SiC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StoryboardView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHf-eu-SRd">
@@ -91,10 +89,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="back with unwind"/>
                                 <connections>
-                                    <action selector="customBackButtonPressed:" destination="pVD-kj-T3B" eventType="touchUpInside" id="GRs-2g-FXJ"/>
-                                    <action selector="customBackButtonPressed:" destination="Kna-ef-LoL" eventType="touchUpInside" id="IPr-SJ-8P3"/>
-                                    <action selector="showSecondButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yI2-Fg-VPl"/>
-                                    <segue destination="pVD-kj-T3B" kind="unwind" unwindAction="unwind:" id="pPs-wy-UDy"/>
+                                    <segue destination="pVD-kj-T3B" kind="unwind" unwindAction="unwind:" id="L44-Rw-2Qg"/>
                                 </connections>
                             </button>
                         </subviews>
